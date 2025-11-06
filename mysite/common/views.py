@@ -5,12 +5,13 @@ from .forms import UserForm
 
 
 def signup(request):
+    """
+    계정생성
+    """
     if request.method == "POST":
         form = UserForm(request.POST)
-        # 비밀번호 길이, 비밀번호 확인 일치, 필수 입력 필드 확인, 이메일 형식 검증
         if form.is_valid():
             form.save()
-            # 유효성 검증 한 번 더 실행
             username = form.cleaned_data.get('username')
             raw_password = form.cleaned_data.get('password1')
             user = authenticate(username=username, password=raw_password)
