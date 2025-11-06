@@ -4,7 +4,7 @@ pipeline {
   environment {
     DEPLOY_USER = 'vagrant'
     DEPLOY_HOST = '192.168.56.123'
-    DEPLOY_DIR  = '/home/vagrant/django_git/mysite'
+    DEPLOY_DIR  = '/home/vagrant/django_git/mysite_jenkins'
     REPO_URL    = 'https://github.com/Jyn-K/django_test'
     BRANCH      = 'main'
     SSH_CRED_ID = 'deploy-ssh-key'   // Jenkins에 만든 credentials ID
