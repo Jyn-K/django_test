@@ -18,6 +18,7 @@ else
 fi
 
 # 3) 가상환경 준비
+cd mysite
 python3 -m venv venv || true
 source venv/bin/activate
 
